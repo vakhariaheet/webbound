@@ -66,7 +66,7 @@ const PrivacyPolicy: React.FC = () => {
               For any privacy-related concerns or requests, please contact our Data Protection Officer:
             </p>
             <div className="bg-gray-50 p-4 rounded-md">
-              <p className="text-gray-600">Email: support@webbound.com</p>
+              <p className="text-gray-600">Email: support@webbound.in</p>
               <p className="text-gray-600">Phone: +91 94267 74932</p>
             </div>
           </section>

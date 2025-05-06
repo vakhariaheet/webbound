@@ -15,23 +15,27 @@ export async function POST(request: Request) {
         message,
         service } = await request.json();
     try {
-        const { error } = await resend.emails.send({
-            from: 'Webbound <no-reply@mail.webbound.in>',
-            to: [ email ],
-            subject: `Thank you for your query about ${service}, ${name} - Webbound`,
-            react: ConfirmationEmail({ name, email, phone, message, service }),
-        });
-        const {  error: error2 } = await resend.emails.send({
-            from: 'Webbound <no-reply@mail.webbound.in>',
-            to: [ 'support@webbound.in' ],
-            subject: `New Client Inquiry: ${service} - from ${name}`,
-            react:QueryNotification({ name, email, phone, message, service,submissionTime:format(changeTimezone(new Date(),Intl.DateTimeFormat().resolvedOptions().timeZone),"PP - p ") }),
-        })
-        if (error || error2) {
-            return Response.json({ error }, { status: 500 });
-        }
+        const resp  = await Promise.all([
+            await resend.emails.send({
+                from: 'Webbound <no-reply@mail.webbound.in>',
+                to: [ email ],
+                subject: `Thank you for your query about ${service}, ${name} - Webbound`,
+                react: ConfirmationEmail({ name, email, phone, message, service }),
+                replyTo: "support@webbound.in",
+            
+            }),
+            await resend.emails.send({
+                from: 'Webbound <no-reply@mail.webbound.in>',
+                to: [ 'support@webbound.in' ],
+                replyTo: email,
+                subject: `New Client Inquiry: ${service} - from ${name}`,
+                react:QueryNotification({ name, email, phone, message, service,submissionTime:format(changeTimezone(new Date(),Intl.DateTimeFormat().resolvedOptions().timeZone),"PP - p ") }),
+            })
+        ])
+        console.log(resp)
         return Response.json({
             message: 'Emails sent successfully',
+            resp,
         });
     } catch (error) {
         return Response.json({ error }, { status: 500 });

@@ -109,16 +109,9 @@ const ConfirmationEmail = ({
 								Ahmedabad, India
 							</Text>
 							<Text className='text-[14px] text-blue-600 underline m-0'>
-								<a href='mailto:contact@webbound.com'>support@webbound.in</a>
+								<a href='mailto:support@webbound.in'>support@webbound.in</a>
 							</Text>
-							<Text className='text-[12px] text-gray-400 mt-[16px] m-0'>
-								<a
-									href='https://webbound.com/unsubscribe'
-									className='text-gray-400'
-								>
-									Unsubscribe
-								</a>
-							</Text>
+							
 						</Section>
 					</Container>
 				</Body>
