@@ -93,7 +93,7 @@ const ConfirmationEmail = ({
 							</Text>
 							<Section className='flex justify-center'>
 								<Img
-									src={'/logo.webp'}
+									src={'https://webbound.in/logo.webp'}
 									alt='Webbound Logo'
 									height={50}
 									className='mx-auto mb-[24px]'
