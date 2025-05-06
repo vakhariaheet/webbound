@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Webbound Fronend APIS",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

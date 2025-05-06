@@ -1,0 +1,22 @@
+meta {
+  name: Send Email
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}/contact
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Heet Vakharia",
+    "email": "heetkv@gmail.com",
+    "phone": "+919104680034",
+    "message": "Test !!!!",
+    "service": "Web Design"
+  }
+  
+}
