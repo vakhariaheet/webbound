@@ -53,7 +53,7 @@ const Team: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 max-sm:flex-col items-center">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-lg max-w-md shadow-md overflow-hidden">
               <div className="aspect-w-3 aspect-h-4">
