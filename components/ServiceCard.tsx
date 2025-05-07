@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, lin
         href={link}
         className="inline-flex items-center text-blue-700 hover:text-blue-800 font-medium transition-colors"
       >
-        Learn More
+        View Our Expertise
         <svg
           className="ml-2 w-4 h-4"
           fill="none"
