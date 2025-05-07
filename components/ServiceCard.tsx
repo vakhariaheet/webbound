@@ -6,9 +6,10 @@ interface ServiceCardProps {
   description: string;
   icon: React.ReactNode;
   link: string;
+  ariaLabel: string; // Add ariaLabel prop for accessibility
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, link }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, link,ariaLabel }) => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 group">
       <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
@@ -17,6 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, lin
       <h3 className="text-xl font-bold mb-3 text-gray-900">{title}</h3>
       <p className="text-gray-600 mb-6">{description}</p>
       <Link
+        aria-label={ariaLabel}
         href={link}
         className="inline-flex items-center text-blue-700 hover:text-blue-800 font-medium transition-colors"
       >

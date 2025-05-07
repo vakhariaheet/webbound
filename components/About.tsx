@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import AboutImage from '@/assets/about.jpeg'
+import AboutImage from '@/assets/about.webp'
 const About: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-gray-50">

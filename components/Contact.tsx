@@ -138,6 +138,7 @@ const Contact: React.FC = () => {
                   Your message has been received. We&apos;ll get back to you shortly.
                 </p>
                 <button
+                  aria-label='Send Another Message'
                   type="button"
                   onClick={() => setIsSubmitted(false)}
                   className="px-6 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-colors"
@@ -212,7 +213,8 @@ const Contact: React.FC = () => {
                       Service You&apos;re Interested In
                     </label>
                     <div className="relative" ref={dropdownRef}>
-                      <button
+                        <button
+                          aria-label='Select a service'
                         type="button"
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="w-full px-4 py-3 border border-gray-300 rounded-md bg-white text-left flex items-center justify-between focus:outline-none focus:ring-1 focus:ring-blue-700 transition-colors"
@@ -230,6 +232,7 @@ const Contact: React.FC = () => {
                           <div className="py-1">
                             {services.filter(s => s.value !== "").map((service) => (
                               <button
+                                aria-label={`Select ${service.label}`}
                                 key={service.value}
                                 type="button"
                                 onClick={() => handleServiceSelect(service.value)}
@@ -282,7 +285,8 @@ const Contact: React.FC = () => {
                 )}
                 
                 <div className="flex justify-end">
-                  <button
+                    <button
+                    aria-label='Send Message'
                     type="submit"
                     disabled={isSubmitting}
                     className={`px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md flex items-center ${

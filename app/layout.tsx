@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/og-image.jpg", // You'll need to create this image
+        url: "/og-image.png", // You'll need to create this image
         width: 1200,
         height: 630,
         alt: "Webbound - Transforming Ideas into Digital Reality",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Webbound | Custom IT Solutions & Web Development Services",
     description: "Professional IT services company offering web development, mobile apps, desktop applications, and custom IT solutions.",
-    images: ["/assets/og-image.jpg"], // Same as OG image
+    images: ["/og-image.png"], // Same as OG image
   },
   robots: {
     index: true,

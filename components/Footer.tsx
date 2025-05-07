@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   const isHomePage = location === '/';
 
   return (
-    <footer className="bg-blue-900 text-white pt-16 pb-6">
+    <footer className="bg-gray-900 text-white pt-16 pb-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -33,14 +33,20 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="flex space-x-4">
-              <a href="https://facebook.com/webbound.in" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition-colors">
+              <a
+                aria-label="Follow us on Facebook"
+                href="https://facebook.com/webbound.in" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition-colors">
                 <Facebook size={20} />
               </a>
           
-              <a href="https://www.linkedin.com/company/webbound" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition-colors">
+              <a
+                aria-label="Follow us on LinkedIn"
+                href="https://www.linkedin.com/company/webbound" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://www.instagram.com/webbound.in/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition-colors">
+              <a
+                aria-label="Follow us on Instagram"
+                href="https://www.instagram.com/webbound.in/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition-colors">
                 <Instagram size={20} />
               </a>
             </div>
@@ -50,19 +56,27 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">Web Development</Link>
+                <Link
+                  aria-label='Web Development'
+                  href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">Web Development</Link>
               </li>
               <li>
-                <Link href="/services/mobile-app-development" className="text-gray-300 hover:text-white transition-colors">Mobile App Development</Link>
+                <Link aria-label='Mobile App Development'
+                  href="/services/mobile-app-development" className="text-gray-300 hover:text-white transition-colors">Mobile App Development</Link>
               </li>
               <li>
-                <Link href="/services/desktop-development" className="text-gray-300 hover:text-white transition-colors">Desktop Applications</Link>
+                <Link
+                  aria-label='Desktop Applications'
+                  href="/services/desktop-development" className="text-gray-300 hover:text-white transition-colors">Desktop Applications</Link>
               </li>
               <li>
-                <Link href="/services/whatsapp-business" className="text-gray-300 hover:text-white transition-colors">WhatsApp Business Solutions</Link>
+                <Link aria-label='WhatsApp Business Solutions'
+                  href="/services/whatsapp-business" className="text-gray-300 hover:text-white transition-colors">WhatsApp Business Solutions</Link>
               </li>
               <li>
-                <Link href="/services/custom-it" className="text-gray-300 hover:text-white transition-colors">Custom IT Services</Link>
+                <Link
+                  aria-label='Custom IT Services'
+                  href="/services/custom-it" className="text-gray-300 hover:text-white transition-colors">Custom IT Services</Link>
               </li>
             </ul>
           </div>
@@ -72,23 +86,32 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 {isHomePage ? (
-                  <a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a>
+                  <a
+                    aria-label='About Us'
+                    href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a>
                 ) : (
-                  <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
+                    <Link
+                      aria-label='About Us'
+                      href="/#about" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
                 )}
               </li>
               <li>
                 {isHomePage ? (
-                  <a href="#team" className="text-gray-300 hover:text-white transition-colors">Our Team</a>
+                  <a aria-label='Our Team'
+                    href="#team" className="text-gray-300 hover:text-white transition-colors">Our Team</a>
                 ) : (
                   <Link href="/#team" className="text-gray-300 hover:text-white transition-colors">Our Team</Link>
                 )}
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link>
+                <Link
+                  aria-label='Contact Us'
+                  href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms-of-service" className="text-gray-300 hover:text-white transition-colors">Terms of Service</Link>
+                <Link
+                  aria-label='Terms of Service'
+                  href="/terms-of-service" className="text-gray-300 hover:text-white transition-colors">Terms of Service</Link>
               </li>
             </ul>
           </div>
@@ -115,9 +138,15 @@ const Footer: React.FC = () => {
               &copy; {currentYear} Webbound. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link href="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms-of-service" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/sitemap.xml" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
+              <Link
+                aria-label='Privacy Policy'
+                href="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
+              <Link
+                aria-label='Terms of Service'
+                href="/terms-of-service" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</Link>
+              <Link
+                aria-label='Sitemap'
+                href="/sitemap.xml" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

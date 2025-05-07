@@ -36,6 +36,7 @@ const Error: React.FC<ErrorProps> = ({ error, reset }) => {
           
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <button
+              aria-label='Try again'
               onClick={reset}
               className="px-6 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md flex-1 text-center"
             >
@@ -43,6 +44,7 @@ const Error: React.FC<ErrorProps> = ({ error, reset }) => {
             </button>
             
             <Link
+              aria-label='Return home'
               href="/"
               className="px-6 py-3 bg-white text-blue-700 font-medium rounded-md border border-blue-700 hover:bg-blue-50 transition-colors flex-1 text-center"
             >

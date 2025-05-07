@@ -8,31 +8,36 @@ const Services: React.FC = () => {
       title: 'Web Development',
       description: 'Custom websites and web applications built with the latest technologies to deliver exceptional user experiences.',
       icon: <Globe className="w-10 h-10 text-blue-700" />,
-      link: '/services/web-development'
+      link: '/services/web-development',
+      ariaLabel: 'Explore our web development services - custom websites and modern web applications'
     },
     {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android that engage users and drive business growth.',
       icon: <Smartphone className="w-10 h-10 text-blue-700" />,
-      link: '/services/mobile-app-development'
+      link: '/services/mobile-app-development',
+      ariaLabel: 'Discover our mobile app development services for iOS and Android platforms'
     },
     {
       title: 'Desktop Application Development',
       description: 'Powerful desktop software tailored to your business needs, with intuitive interfaces and robust functionality.',
       icon: <Monitor className="w-10 h-10 text-blue-700" />,
-      link: '/services/desktop-development'
+      link: '/services/desktop-development',
+      ariaLabel: 'View our desktop software development solutions and custom business applications'
     },
     {
       title: 'WhatsApp Business Solutions',
       description: 'Implement WhatsApp Business API to enhance customer engagement and streamline communication.',
       icon: <MessageSquare className="w-10 h-10 text-blue-700" />,
-      link: '/services/whatsapp-business'
+      link: '/services/whatsapp-business',
+      ariaLabel: 'Explore WhatsApp Business API integration services and communication solutions'
     },
     {
       title: 'Custom IT Solutions',
       description: 'Specialized IT services and solutions designed to address your unique business challenges.',
       icon: <Code className="w-10 h-10 text-blue-700" />,
-      link: '/services/custom-it'
+      link: '/services/custom-it',
+      ariaLabel: 'Discover specialized IT solutions and consulting services for your business'
     },
   ];
 
@@ -56,6 +61,7 @@ const Services: React.FC = () => {
               description={service.description}
               icon={service.icon}
               link={service.link}
+              ariaLabel={service.ariaLabel}
             />
           ))}
         </div>

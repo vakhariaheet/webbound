@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Metadata } from 'next';
-import MobileImage from "@/assets/desktop.jpeg"
+import MobileImage from "@/assets/desktop.webp"
 export const metadata: Metadata = {
   title: "Mobile App Development Services | Webbound",
   description: "Create powerful, user-friendly mobile applications for iOS and Android that engage users and drive business growth.",
@@ -62,7 +62,8 @@ const MobileAppDevelopment: React.FC = () => {
                 Create powerful mobile experiences with our custom app development services.
                 From concept to launch, we build apps that users love.
               </p>
-              <Link 
+                          <Link 
+                aria-label='Schedule a consultation'
                 href="/#contact" 
                 className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md"
               >

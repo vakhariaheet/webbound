@@ -48,7 +48,9 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/">
+            <Link
+              aria-label='Home'
+              href="/">
               <Logo />
             </Link>
           </div>
@@ -58,6 +60,7 @@ const Navbar: React.FC = () => {
               <button
                 onClick={toggleServices}
                 className="flex items-center text-gray-900 hover:text-blue-700 font-medium transition-colors"
+                aria-label='Toggle services'
               >
                 Services
                 <ChevronDown className="ml-1 w-4 h-4" />
@@ -77,16 +80,24 @@ const Navbar: React.FC = () => {
               </div>
             </div>
             {isHomePage ? (
-              <a href="#about" className="text-gray-900 hover:text-blue-700 font-medium transition-colors">About</a>
+              <a
+                aria-label='About'
+                href="#about" className="text-gray-900 hover:text-blue-700 font-medium transition-colors">About</a>
             ) : (
-              <Link href="/#about" className="text-gray-900 hover:text-blue-700 font-medium transition-colors">About</Link>
+                <Link
+                  aria-label='About'
+                  href="/#about" className="text-gray-900 hover:text-blue-700 font-medium transition-colors">About</Link>
             )}
             {isHomePage ? (
-              <a href="#contact" className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition-colors font-medium">
+              <a
+                aria-label='Contact Us'
+                href="#contact" className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition-colors font-medium">
                 Contact Us
               </a>
             ) : (
-              <Link href="/#contact" className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition-colors font-medium">
+                <Link
+                  aria-label='Contact Us'
+                  href="/#contact" className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition-colors font-medium">
                 Contact Us
               </Link>
             )}
@@ -97,6 +108,8 @@ const Navbar: React.FC = () => {
               type="button"
               className="text-gray-900 hover:text-blue-700 focus:outline-none"
               onClick={toggleMenu}
+              aria-label="Toggle menu"
+           
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -111,6 +124,7 @@ const Navbar: React.FC = () => {
                 <button
                   onClick={toggleServices}
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md"
+                  aria-label='Toggle services'
                 >
                   Services
                   <ChevronDown className="ml-1 w-4 h-4" />
@@ -135,6 +149,7 @@ const Navbar: React.FC = () => {
               </div>
               {isHomePage ? (
                 <a
+                  aria-label='About'
                   href="#about"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                   onClick={() => setIsOpen(false)}
@@ -142,7 +157,8 @@ const Navbar: React.FC = () => {
                   About
                 </a>
               ) : (
-                <Link
+                  <Link
+                  aria-label='About'
                   href="/#about"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                   onClick={() => setIsOpen(false)}
@@ -152,6 +168,7 @@ const Navbar: React.FC = () => {
               )}
               {isHomePage ? (
                 <a
+                  aria-label='Contact Us'
                   href="#contact"
                   className="block px-3 py-2 rounded-md text-base font-medium bg-blue-700 text-white hover:bg-blue-800"
                   onClick={() => setIsOpen(false)}
@@ -159,7 +176,8 @@ const Navbar: React.FC = () => {
                   Contact Us
                 </a>
               ) : (
-                <Link
+                  <Link
+                  aria-label='Contact Us'
                   href="/#contact"
                   className="block px-3 py-2 rounded-md text-base font-medium bg-blue-700 text-white hover:bg-blue-800"
                   onClick={() => setIsOpen(false)}

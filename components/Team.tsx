@@ -1,7 +1,7 @@
 import React from 'react';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
 import Heet from "@/assets/heet.webp";
-import Kandarp from "@/assets/kandarp.jpeg";
+import Kandarp from "@/assets/kandarp.webp";
 import Image, { StaticImageData } from 'next/image';
 interface TeamMember {
   name: string;
@@ -73,17 +73,23 @@ const Team: React.FC = () => {
 
                 <div className="flex space-x-4">
                   {member.social.linkedin && (
-                    <a href={member.social.linkedin} className="text-gray-600 hover:text-blue-700">
+                    <a href={member.social.linkedin}
+                      aria-label='Follow {member.name} on LinkedIn'
+                      className="text-gray-600 hover:text-blue-700">
                       <Linkedin className="w-5 h-5" />
                     </a>
                   )}
                   {member.social.twitter && (
-                    <a href={member.social.twitter} className="text-gray-600 hover:text-blue-700">
+                    <a
+                      aria-label='Follow {member.name} on Twitter'
+                      href={member.social.twitter} className="text-gray-600 hover:text-blue-700">
                       <Twitter className="w-5 h-5" />
                     </a>
                   )}
                   {member.social.email && (
-                    <a href={`mailto:${member.social.email}`} className="text-gray-600 hover:text-blue-700">
+                    <a
+                      aria-label='Contact {member.name} via email'
+                      href={`mailto:${member.social.email}`} className="text-gray-600 hover:text-blue-700">
                       <Mail className="w-5 h-5" />
                     </a>
                   )}

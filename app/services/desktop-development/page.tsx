@@ -4,7 +4,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import {  CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import DesktopImage from '@/assets/desktop.jpeg';
+import DesktopImage from '@/assets/desktop.webp';
 import Image from 'next/image';
 export const metadata: Metadata = {
   title: "Desktop Application Development | Webbound",
@@ -61,7 +61,8 @@ const DesktopDevelopment: React.FC = () => {
                 Build powerful desktop applications that streamline your business operations.
                 We create intuitive, high-performance software for all major platforms.
               </p>
-              <Link 
+                          <Link 
+                aria-label="Contact us"
                 href="/#contact" 
                 className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md"
               >

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-import HeroBG from "@/assets/hero-bg.jpeg"
-import HeroFG from "@/assets/hero-fg.jpeg"
+import HeroBG from "@/assets/hero-bg.webp"
+import HeroFG from "@/assets/hero-fg.webp"
 import Image from 'next/image';
 const Hero: React.FC = () => {
   return (
@@ -30,6 +30,7 @@ const Hero: React.FC = () => {
                 Explore Services
               </a>
               <Link 
+                aria-label='Schedule a consultation'
                 href="/#contact" 
                 className="px-8 py-3 border border-blue-700 text-blue-700 font-medium rounded-md hover:bg-blue-50 transition-colors text-center"
               >

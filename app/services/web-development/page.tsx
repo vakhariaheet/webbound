@@ -4,7 +4,7 @@ import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import WebImage from "@/assets/web.jpeg"
+import WebImage from "@/assets/web.webp"
 import Image from 'next/image';
 export const metadata: Metadata = {
   title: "Web Development Services | Webbound",
@@ -56,7 +56,8 @@ const WebDevelopment: React.FC = () => {
                 Transform your digital presence with our custom web development solutions. 
                 We create modern, responsive websites that drive results.
               </p>
-              <Link 
+                          <Link 
+                aria-label='Schedule a consultation'
                 href="/#contact" 
                 className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md"
               >

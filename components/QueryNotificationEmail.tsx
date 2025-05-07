@@ -96,7 +96,8 @@ const Email = ({
 								</Column>
 								<Column>
 									<Text className='text-[14px] text-gray-800 m-0'>
-										<Link
+                                        <Link
+											aria-label='Email client'
 											href={`mailto:${email}`}
 											className='text-blue-600 no-underline'
 										>
@@ -114,7 +115,8 @@ const Email = ({
 									</Column>
 									<Column>
 										<Text className='text-[14px] text-gray-800 m-0'>
-											<Link
+                                            <Link
+												aria-label='Call client'
 												href={`tel:${phone}`}
 												className='text-blue-600 no-underline'
 											>

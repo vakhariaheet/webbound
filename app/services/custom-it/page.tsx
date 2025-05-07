@@ -4,7 +4,7 @@ import { CheckCircle, Server, Shield, Cpu, Database } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import ITCustom from '@/assets/it-custom.jpeg';
+import ITCustom from '@/assets/it-custom.webp';
 export const metadata: Metadata = {
   title: "Custom IT Solutions | Webbound",
   description: "Transform your business with our comprehensive IT solutions. We provide custom-tailored services to address your unique challenges and drive digital transformation.",
@@ -110,6 +110,7 @@ const CustomIT: React.FC = () => {
               </p>
               <Link 
                 href="/#contact" 
+                aria-label="Schedule a consultation"
                 className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md"
               >
                 Schedule a Consultation
@@ -175,6 +176,7 @@ const CustomIT: React.FC = () => {
               Let&apos;s discuss how our custom IT solutions can help your business thrive in the digital age.
             </p>
             <Link 
+              aria-label='Schedule a consultation'
               href="/#contact"
               className="inline-flex items-center px-8 py-3 bg-white text-blue-700 font-medium rounded-md hover:bg-gray-100 transition-colors shadow-md"
             >

@@ -21,12 +21,14 @@ export default function NotFound() {
           <Link 
             href="/"
             className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md"
+            aria-label='Go back to home'
           >
             <ArrowLeft className="mr-2 h-5 w-5" />
             Back to Home
           </Link>
           <Link 
             href="/#contact"
+            aria-label='Contact support'
             className="inline-flex items-center px-8 py-3 border border-blue-700 text-blue-700 font-medium rounded-md hover:bg-blue-50 transition-colors"
           >
             Contact Support

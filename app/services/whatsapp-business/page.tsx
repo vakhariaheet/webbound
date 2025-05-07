@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Metadata } from 'next';
-import WhatsappImage from "@/assets/whatsapp.jpeg";
+import WhatsappImage from "@/assets/whatsapp.webp";
 export const metadata: Metadata = {
   title: "WhatsApp Business Solutions | Webbound",
   description: "Implement WhatsApp Business API to enhance customer engagement and streamline communication for your business.",
@@ -62,7 +62,8 @@ const WhatsAppBusiness: React.FC = () => {
                 Transform your business communication with WhatsApp Business solutions.
                 Engage customers, automate support, and drive growth through the world&apos;s most popular messaging platform.
               </p>
-              <Link 
+                          <Link 
+                aria-label='Schedule a consultation'
                 href="/#contact" 
                 className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors shadow-md"
               >
