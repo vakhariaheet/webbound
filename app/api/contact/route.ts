@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     try {
         const resp  = await Promise.all([
             await resend.emails.send({
-                from: 'Webbound <no-reply@mail.webbound.in>',
+                from: 'Webbound <no-reply@updates.webbound.in>',
                 to: [ email ],
                 subject: `Thank you for your query about ${service}, ${name} - Webbound`,
                 react: ConfirmationEmail({ name, email, phone, message, service }),
