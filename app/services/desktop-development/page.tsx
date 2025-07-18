@@ -6,27 +6,10 @@ import {  CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import DesktopImage from '@/assets/desktop.webp';
 import Image from 'next/image';
-export const metadata: Metadata = {
-  title: "Desktop Application Development | Webbound",
-  description: "Powerful desktop software tailored to your business needs, with intuitive interfaces and robust functionality.",
-  keywords: "desktop application development, desktop software, cross-platform desktop apps, Electron, desktop solutions, business software",
-  alternates: {
-    canonical: "/services/desktop-development",
-  },
-  openGraph: {
-    title: "Desktop Application Development | Webbound",
-    description: "Powerful desktop software tailored to your business needs, with intuitive interfaces and robust functionality.",
-    url: "https://webbound.in/services/desktop-development",
-    siteName: "Webbound",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Desktop Application Development | Webbound",
-    description: "Powerful desktop software tailored to your business needs, with intuitive interfaces and robust functionality.",
-  },
-};
+import { generateServiceMetadata } from '@/utils/serviceMetadata';
+
+export const metadata = generateServiceMetadata('desktop-development');
+
 
 const DesktopDevelopment: React.FC = () => {
   const features = [

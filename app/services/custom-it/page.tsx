@@ -5,27 +5,10 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import ITCustom from '@/assets/it-custom.webp';
-export const metadata: Metadata = {
-  title: "Custom IT Solutions | Webbound",
-  description: "Transform your business with our comprehensive IT solutions. We provide custom-tailored services to address your unique challenges and drive digital transformation.",
-  keywords: "custom IT solutions, IT services, cloud infrastructure, cybersecurity, DevOps solutions, data solutions, digital transformation",
-  alternates: {
-    canonical: "/services/custom-it",
-  },
-  openGraph: {
-    title: "Custom IT Solutions | Webbound",
-    description: "Transform your business with our comprehensive IT solutions. We provide custom-tailored services to address your unique challenges.",
-    url: "https://webbound.in/services/custom-it",
-    siteName: "Webbound",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Custom IT Solutions | Webbound",
-    description: "Transform your business with our comprehensive IT solutions. We provide custom-tailored services to address your unique challenges.",
-  },
-};
+import { generateServiceMetadata } from '@/utils/serviceMetadata';
+
+export const metadata = generateServiceMetadata('custom-it');
+
 
 const CustomIT: React.FC = () => {
   const solutions = [

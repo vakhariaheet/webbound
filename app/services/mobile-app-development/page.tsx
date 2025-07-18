@@ -3,27 +3,11 @@
 import React from 'react';
 import { Metadata } from 'next';
 import MobileImage from "@/assets/desktop.webp"
-export const metadata: Metadata = {
-  title: "Mobile App Development Services | Webbound",
-  description: "Create powerful, user-friendly mobile applications for iOS and Android that engage users and drive business growth.",
-  keywords: "mobile app development, iOS development, Android development, cross-platform apps, React Native, Flutter, mobile solutions",
-  alternates: {
-    canonical: "/services/mobile-app-development",
-  },
-  openGraph: {
-    title: "Mobile App Development Services | Webbound",
-    description: "Create powerful, user-friendly mobile applications for iOS and Android that engage users and drive business growth.",
+import { generateServiceMetadata } from '@/utils/serviceMetadata';
+
+export const metadata = generateServiceMetadata('mobile-app-development');
     url: "https://webbound.in/services/mobile-app-development",
-    siteName: "Webbound",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Mobile App Development Services | Webbound",
-    description: "Create powerful, user-friendly mobile applications for iOS and Android that engage users and drive business growth.",
-  },
-};
+
 
 import {  CheckCircle } from 'lucide-react';
 import Link from 'next/link';

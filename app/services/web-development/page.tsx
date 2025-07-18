@@ -6,22 +6,9 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import WebImage from "@/assets/web.webp"
 import Image from 'next/image';
-export const metadata: Metadata = {
-  title: "Web Development Services | Webbound",
-  description: "Transform your digital presence with our custom web development solutions. We create modern, responsive websites that drive results.",
-  keywords: "web development, website design, responsive websites, custom websites, e-commerce solutions, PWA, content management systems",
-  alternates: {
-    canonical: "/services/web-development",
-  },
-  openGraph: {
-    title: "Web Development Services | Webbound",
-    description: "Transform your digital presence with our custom web development solutions. We create modern, responsive websites that drive results.",
-    url: "https://webbound.in/services/web-development",
-    siteName: "Webbound",
-    locale: "en_US",
-    type: "website",
-  },
-};
+import { generateServiceMetadata } from '@/utils/serviceMetadata';
+
+export const metadata = generateServiceMetadata('web-development');
 
 const WebDevelopment: React.FC = () => {
   const features = [
